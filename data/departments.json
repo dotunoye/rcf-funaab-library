@@ -1,0 +1,267 @@
+[
+  {
+    "name": "Mechatronics Engineering",
+    "faculty": "College of Engineering",
+    "icon": "🤖",
+    "color": "#4ade80",
+    "live": true,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/folderview?id=1-GwLLz-OXJNPWLGSXRkWU9GjIrbBa1Ba" },
+      { "level": "200", "url": "https://drive.google.com/drive/folders/1-F5auxsKu4stJCeKfE37s21HoKztGGit" },
+      { "level": "300", "url": "https://drive.google.com/folderview?id=1-Eq99Qwr2WdbLbR9CZu5I5n8ChqzQ8IA" },
+      { "level": "400", "url": "https://drive.google.com/folderview?id=1-B6nbbSc_0V-X0jiKehFhyB-LnoTL2Nt" },
+      { "level": "500", "url": "https://drive.google.com/folderview?id=1-26qjwc9wQZFfqgzKFd4YQ55ZZ0PeWQC" }
+    ]
+  },
+  {
+    "name": "Mechanical Engineering",
+    "faculty": "College of Engineering",
+    "icon": "⚙️",
+    "color": "#4ade80",
+    "live": true,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/drive/folders/16geTac2HzljzANlodUS5bzjAF8niKT9b" },
+      { "level": "200", "url": "https://drive.google.com/drive/folders/1ovnKIvN20H58CJ9AzGzQ7rmhYgtcJ0oe" },
+      { "level": "300", "url": "https://drive.google.com/drive/folders/17qrn-XQDd-aDcyaKiobaMQHsHTxFG1o-" },
+      { "level": "400", "url": "https://drive.google.com/drive/folders/12dlWX_ugTBVAFxXCr7grDMJOw8zujYn_" },
+      { "level": "500", "url": "https://drive.google.com/drive/folders/1X0jk0Y-wLxPYoSJy7faGkR79XNPFbf6T?usp=drive_link" }
+    ]
+  },
+  {
+    "name": "Agricultural Engineering",
+    "faculty": "College of Engineering",
+    "icon": "🌾",
+    "color": "#4ade80",
+    "live": true,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/drive/folders/1-GwLLz-OXJNPWLGSXRkWU9GjIrbBa1Ba" },
+      { "level": "200", "url": "https://drive.google.com/drive/folders/1toDhZqICgzRgGVRhveSLbtDH5RuCfToW" },
+      { "level": "300", "url": "https://drive.google.com/drive/folders/1rpsWeKg1ra3nlfXWaCAAivHaRlHt-CCE" },
+      { "level": "400", "url": "https://drive.google.com/drive/folders/1EdmIczCpz3c1BdefL7A-1LQpHIN5nAvs" },
+      { "level": "NIL", "url": "https://drive.google.com/PLACEHOLDER_AGRIC_ENG_500" }
+    ]
+  },
+  {
+    "name": "Electrical Engineering",
+    "faculty": "College of Engineering",
+    "icon": "⚡",
+    "color": "#4ade80",
+    "live": false,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_ELECTRICAL_100" },
+      { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_ELECTRICAL_200" },
+      { "level": "300", "url": "https://drive.google.com/PLACEHOLDER_ELECTRICAL_300" },
+      { "level": "400", "url": "https://drive.google.com/PLACEHOLDER_ELECTRICAL_400" },
+      { "level": "500", "url": "https://drive.google.com/PLACEHOLDER_ELECTRICAL_500" }
+    ]
+  },
+  {
+    "name": "Civil Engineering",
+    "faculty": "College of Engineering",
+    "icon": "🏗️",
+    "color": "#4ade80",
+    "live": false,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_CIVIL_100" },
+      { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_CIVIL_200" },
+      { "level": "300", "url": "https://drive.google.com/PLACEHOLDER_CIVIL_300" },
+      { "level": "400", "url": "https://drive.google.com/PLACEHOLDER_CIVIL_400" },
+      { "level": "500", "url": "https://drive.google.com/PLACEHOLDER_CIVIL_500" }
+    ]
+  },
+  {
+    "name": "Physics",
+    "faculty": "College of Natural Sciences",
+    "icon": "🔬",
+    "color": "#22d3ee",
+    "live": true,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_PHYSICS_100" },
+      { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_PHYSICS_200" },
+      { "level": "300", "url": "https://drive.google.com/PLACEHOLDER_PHYSICS_300" },
+      { "level": "400", "url": "https://drive.google.com/PLACEHOLDER_PHYSICS_400" }
+    ]
+  },
+  {
+    "name": "Biology",
+    "faculty": "College of Natural Sciences",
+    "icon": "🧬",
+    "color": "#22d3ee",
+    "live": true,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_BIOLOGY_100" },
+      { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_BIOLOGY_200" },
+      { "level": "300", "url": "https://drive.google.com/PLACEHOLDER_BIOLOGY_300" },
+      { "level": "400", "url": "https://drive.google.com/PLACEHOLDER_BIOLOGY_400" }
+    ]
+  },
+  {
+    "name": "Microbiology",
+    "faculty": "College of Natural Sciences",
+    "icon": "🦠",
+    "color": "#22d3ee",
+    "live": true,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_MICROBIOLOGY_100" },
+      { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_MICROBIOLOGY_200" },
+      { "level": "300", "url": "https://drive.google.com/PLACEHOLDER_MICROBIOLOGY_300" },
+      { "level": "400", "url": "https://drive.google.com/PLACEHOLDER_MICROBIOLOGY_400" }
+    ]
+  },
+  {
+    "name": "Aquaculture & Fisheries Management",
+    "faculty": "College of Agricultural Management",
+    "icon": "🐟",
+    "color": "#a78bfa",
+    "live": true,
+    "levels": [
+      { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_AQUACULTURE_100" },
+      { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_AQUACULTURE_200" },
+      { "level": "300", "url": "https://drive.google.com/PLACEHOLDER_AQUACULTURE_300" },
+      { "level": "400", "url": "https://drive.google.com/PLACEHOLDER_AQUACULTURE_400" }
+    ]
+  },
+  {
+    "name": "Computer Science",
+    "faculty": "College of Physical Sciences",
+    "icon": "💻",
+    "color": "#f97316",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Mathematics",
+    "faculty": "College of Physical Sciences",
+    "icon": "📐",
+    "color": "#f97316",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Statistics",
+    "faculty": "College of Physical Sciences",
+    "icon": "📊",
+    "color": "#f97316",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Chemistry",
+    "faculty": "College of Natural Sciences",
+    "icon": "⚗️",
+    "color": "#22d3ee",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Biochemistry",
+    "faculty": "College of Natural Sciences",
+    "icon": "🧪",
+    "color": "#22d3ee",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Crop Production",
+    "faculty": "College of Agriculture",
+    "icon": "🌱",
+    "color": "#84cc16",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Soil Science",
+    "faculty": "College of Agriculture",
+    "icon": "🌍",
+    "color": "#84cc16",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Animal Production",
+    "faculty": "College of Agriculture",
+    "icon": "🐄",
+    "color": "#84cc16",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Horticulture",
+    "faculty": "College of Agriculture",
+    "icon": "🌿",
+    "color": "#84cc16",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Food Science & Technology",
+    "faculty": "College of Food Science",
+    "icon": "🍱",
+    "color": "#fb923c",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Nutrition & Dietetics",
+    "faculty": "College of Food Science",
+    "icon": "🥗",
+    "color": "#fb923c",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Forestry & Wildlife Management",
+    "faculty": "College of Forestry",
+    "icon": "🌲",
+    "color": "#4ade80",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Water Resources Management",
+    "faculty": "College of Engineering",
+    "icon": "💧",
+    "color": "#4ade80",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Environmental Management",
+    "faculty": "College of Environmental Studies",
+    "icon": "♻️",
+    "color": "#34d399",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Agricultural Economics & Extension",
+    "faculty": "College of Agricultural Management",
+    "icon": "📈",
+    "color": "#a78bfa",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Home Economics",
+    "faculty": "College of Food Science",
+    "icon": "🏠",
+    "color": "#fb923c",
+    "live": false,
+    "levels": []
+  },
+  {
+    "name": "Veterinary Medicine",
+    "faculty": "College of Veterinary Medicine",
+    "icon": "🐾",
+    "color": "#f43f5e",
+    "live": false,
+    "levels": [
+      { "level": "100", "url": "" },
+      { "level": "200", "url": "" },
+      { "level": "300", "url": "" },
+      { "level": "400", "url": "" },
+      { "level": "500", "url": "" },
+      { "level": "600", "url": "" }
+    ]
+  }
+]
