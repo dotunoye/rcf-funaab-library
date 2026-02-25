@@ -115,4 +115,4 @@ All colours are CSS variables in `css/style.css` under `:root {}`:
 
 ---
 
-Built with ❤️ by RCF FUNAAB
+Built with ❤️ by Dotun
