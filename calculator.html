@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title>RCF FUNAAB Digital Library | Redeemed Christian Fellowship</title>
+  <meta name="description" content="Access academic resources for all departments at the Federal University of Agriculture, Abeokuta. A digital library initiative by Redeemed Christian Fellowship (RCF) FUNAAB." />
+  <meta name="keywords" content="FUNAAB, digital library, RCF, Redeemed Christian Fellowship, Federal University of Agriculture Abeokuta, academic resources, department library" />
+  <meta name="author" content="RCF FUNAAB" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RCF FUNAAB Digital Library" />
+  <meta property="og:description" content="Browse and access academic resources for every department at FUNAAB — a digital library initiative by RCF." />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:site_name" content="RCF FUNAAB Digital Library" />
+  <meta property="og:image" content="https://yourdomain.com/og-image.png" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RCF FUNAAB Digital Library" />
+  <meta name="twitter:description" content="Browse and access academic resources for every department at FUNAAB." />
+  <meta name="twitter:image" content="https://yourdomain.com/og-image.png" />
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/image.png">
+  <link rel="stylesheet" href="css/calc.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Library",
+    "name": "RCF FUNAAB Digital Library",
+    "description": "Academic digital library for Federal University of Agriculture, Abeokuta departments, managed by Redeemed Christian Fellowship.",
+    "url": "https://yourdomain.com",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Federal University of Agriculture, Abeokuta",
+      "alternateName": "FUNAAB"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="back-link" aria-label="Back to library">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    </a>
+    <div class="logo-mark" aria-hidden="true"><img class="logo-img" src="assets/image.png" alt="RCF Logo"></div>
+    <div class="header-text">
+      <strong>FUNAAB CGPA Calculator</strong>
+      <span>5.0 Scale · NUC Standard</span>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- Grading Reference -->
+  <div class="grade-ref">
+    <div class="grade-ref-title">FUNAAB Grading Scale</div>
+    <div class="grade-table">
+      <div class="grade-pill a"><span class="letter">A</span><span class="range">70–100</span><span class="gp">GP: 5</span></div>
+      <div class="grade-pill b"><span class="letter">B</span><span class="range">60–69</span><span class="gp">GP: 4</span></div>
+      <div class="grade-pill c"><span class="letter">C</span><span class="range">50–59</span><span class="gp">GP: 3</span></div>
+      <div class="grade-pill d"><span class="letter">D</span><span class="range">45–49</span><span class="gp">GP: 2</span></div>
+      <div class="grade-pill e"><span class="letter">E</span><span class="range">40–44</span><span class="gp">GP: 1</span></div>
+      <div class="grade-pill f"><span class="letter">F</span><span class="range">0–39</span><span class="gp">GP: 0</span></div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('semester', this)">Current Semester GPA</button>
+    <button class="tab-btn" onclick="switchTab('cumulative', this)">Cumulative CGPA</button>
+  </div>
+
+  <!-- ══ SEMESTER TAB ══ -->
+  <div id="tab-semester">
+    <div id="semester-single" class="semester-card">
+      <div class="semester-header">
+        <span class="semester-label">Semester Courses</span>
+        <span class="semester-gpa-badge" id="single-gpa-badge">GPA: —</span>
+      </div>
+      <div class="semester-body">
+        <div class="col-headers">
+          <span>Course</span><span>Units</span><span>Grade</span><span></span>
+        </div>
+        <div class="courses-list" id="single-courses"></div>
+        <button class="btn btn-ghost" onclick="addCourse('single-courses', 'single')">+ Add Course</button>
+      </div>
+    </div>
+    <div id="result-single" class="result-panel" style="display:none"></div>
+  </div>
+
+  <!-- ══ CUMULATIVE TAB ══ -->
+  <div id="tab-cumulative" style="display:none">
+    <div id="semesters-container"></div>
+    <div class="add-semester-wrap">
+      <button class="btn btn-accent" onclick="addSemester()">+ Add Semester</button>
+    </div>
+    <div id="result-cumulative" class="result-panel" style="display:none"></div>
+  </div>
+
+</div><!-- /.page -->
+
+<script>
+'use strict';
+
+// ── Grading System ────────────────────────────────────────
+const GRADES = [
+  { letter: 'A', min: 70, gp: 5 },
+  { letter: 'B', min: 60, gp: 4 },
+  { letter: 'C', min: 50, gp: 3 },
+  { letter: 'D', min: 45, gp: 2 },
+  { letter: 'E', min: 40, gp: 1 },
+  { letter: 'F', min: 0,  gp: 0 },
+];
+
+const GP_MAP = { A: 5, B: 4, C: 3, D: 2, E: 1, F: 0 };
+
+function getClass(cgpa) {
+  if (cgpa >= 4.50) return { label: 'First Class',          css: 'class-first'    };
+  if (cgpa >= 3.50) return { label: 'Second Class Upper',   css: 'class-second-u' };
+  if (cgpa >= 2.40) return { label: 'Second Class Lower',   css: 'class-second-l' };
+  if (cgpa >= 1.50) return { label: 'Third Class',          css: 'class-third'    };
+  if (cgpa >= 1.00) return { label: 'Pass',                 css: 'class-pass'     };
+  return                   { label: 'Fail',                 css: 'class-fail'     };
+}
+
+const gradeSelectHTML = () =>
+  `<select onchange="recalc()">
+    ${['A','B','C','D','E','F'].map(g =>
+      `<option value="${g}">${g} (${GP_MAP[g]} pts)</option>`
+    ).join('')}
+  </select>`;
+
+// ── Course rows ───────────────────────────────────────────
+let courseCounters = {};
+
+function addCourse(listId, semId) {
+  if (!courseCounters[listId]) courseCounters[listId] = 0;
+  const idx = courseCounters[listId]++;
+  const id  = `${listId}-${idx}`;
+  const row = document.createElement('div');
+  row.className = 'course-row';
+  row.id = id;
+  row.innerHTML = `
+    <input type="text" placeholder="e.g. MCE 201" oninput="recalc()" />
+    <input type="number" min="1" max="6" placeholder="Units" value="3" oninput="recalc()" />
+    ${gradeSelectHTML()}
+    <button class="delete-btn" onclick="deleteCourse('${id}', '${semId}')" aria-label="Remove course">✕</button>
+  `;
+  document.getElementById(listId).appendChild(row);
+  recalc();
+}
+
+function deleteCourse(rowId, semId) {
+  const el = document.getElementById(rowId);
+  if (el) el.remove();
+  recalc();
+}
+
+// ── Semester management (cumulative) ─────────────────────
+let semesterCount = 0;
+
+function addSemester() {
+  semesterCount++;
+  const semId   = `sem-${semesterCount}`;
+  const listId  = `courses-${semId}`;
+  const names   = ['1st Sem','2nd Sem','3rd Sem','4th Sem','5th Sem','6th Sem','7th Sem','8th Sem','9th Sem','10th Sem'];
+  const label   = `${Math.ceil(semesterCount/2) === 0 ? 1 : Math.ceil(semesterCount/2)}00 Level · ${names[(semesterCount-1) % 2] || `Semester ${semesterCount}`}`;
+
+  const card = document.createElement('div');
+  card.className = 'semester-card';
+  card.id = semId;
+  card.innerHTML = `
+    <div class="semester-header">
+      <span class="semester-label">${label}</span>
+      <div style="display:flex;gap:0.5rem;align-items:center">
+        <span class="semester-gpa-badge" id="badge-${semId}">GPA: —</span>
+        <button class="btn btn-danger" onclick="removeSemester('${semId}')" style="padding:0.3rem 0.65rem;font-size:0.75rem">Remove</button>
+      </div>
+    </div>
+    <div class="semester-body">
+      <div class="col-headers">
+        <span>Course</span><span>Units</span><span>Grade</span><span></span>
+      </div>
+      <div class="courses-list" id="${listId}"></div>
+      <button class="btn btn-ghost" onclick="addCourse('${listId}', '${semId}')">+ Add Course</button>
+    </div>
+  `;
+  document.getElementById('semesters-container').appendChild(card);
+
+  // Seed with 5 default courses
+  for (let i = 0; i < 5; i++) addCourse(listId, semId);
+  recalc();
+}
+
+function removeSemester(semId) {
+  const el = document.getElementById(semId);
+  if (el) el.remove();
+  recalc();
+}
+
+// ── Calculation ───────────────────────────────────────────
+function calcSemester(listId) {
+  const list = document.getElementById(listId);
+  if (!list) return { gpa: 0, cu: 0, qp: 0, courses: 0 };
+
+  const rows = list.querySelectorAll('.course-row');
+  let totalCU = 0, totalQP = 0, count = 0;
+
+  rows.forEach(row => {
+    const cu    = parseFloat(row.querySelectorAll('input')[1]?.value) || 0;
+    const grade = row.querySelector('select')?.value || 'F';
+    const gp    = GP_MAP[grade] ?? 0;
+    if (cu > 0) { totalCU += cu; totalQP += cu * gp; count++; }
+  });
+
+  const gpa = totalCU > 0 ? totalQP / totalCU : 0;
+  return { gpa, cu: totalCU, qp: totalQP, courses: count };
+}
+
+function recalc() {
+  const activeTab = document.getElementById('tab-semester').style.display !== 'none' ? 'semester' : 'cumulative';
+
+  if (activeTab === 'semester') {
+    const { gpa, cu, qp, courses } = calcSemester('single-courses');
+    document.getElementById('single-gpa-badge').textContent = courses > 0 ? `GPA: ${gpa.toFixed(2)}` : 'GPA: —';
+    renderSingleResult(gpa, cu, qp, courses);
+  } else {
+    recalcCumulative();
+  }
+}
+
+function renderSingleResult(gpa, cu, qp, courses) {
+  const panel = document.getElementById('result-single');
+  if (courses === 0) { panel.style.display = 'none'; return; }
+  panel.style.display = 'block';
+  const cls = getClass(gpa);
+  panel.innerHTML = `
+    <div class="result-label">Your Semester GPA</div>
+    <div class="cgpa-display">${gpa.toFixed(2)}</div>
+    <div class="class-badge ${cls.css}">${cls.label}</div>
+    <div class="result-grid">
+      <div class="result-stat"><div class="stat-label">Total Credit Units</div><div class="stat-val">${cu}</div></div>
+      <div class="result-stat"><div class="stat-label">Quality Points</div><div class="stat-val">${qp.toFixed(0)}</div></div>
+      <div class="result-stat"><div class="stat-label">Courses</div><div class="stat-val">${courses}</div></div>
+    </div>
+  `;
+}
+
+function recalcCumulative() {
+  const container = document.getElementById('semesters-container');
+  const semCards  = container.querySelectorAll('.semester-card');
+  const panel     = document.getElementById('result-cumulative');
+
+  if (semCards.length === 0) { panel.style.display = 'none'; return; }
+
+  let totalCU = 0, totalQP = 0;
+  const semResults = [];
+
+  semCards.forEach(card => {
+    const semId  = card.id;
+    const listId = `courses-${semId}`;
+    const label  = card.querySelector('.semester-label')?.textContent || semId;
+    const { gpa, cu, qp, courses } = calcSemester(listId);
+    totalCU += cu; totalQP += qp;
+    // Update badge
+    const badge = document.getElementById(`badge-${semId}`);
+    if (badge) badge.textContent = courses > 0 ? `GPA: ${gpa.toFixed(2)}` : 'GPA: —';
+    if (cu > 0) semResults.push({ label, gpa, cu, qp });
+  });
+
+  if (totalCU === 0) { panel.style.display = 'none'; return; }
+
+  const cgpa = totalQP / totalCU;
+  const cls  = getClass(cgpa);
+
+  panel.style.display = 'block';
+  panel.innerHTML = `
+    <div class="result-label">Your Cumulative CGPA</div>
+    <div class="cgpa-display">${cgpa.toFixed(2)}</div>
+    <div class="class-badge ${cls.css}">${cls.label}</div>
+    <div class="result-grid">
+      <div class="result-stat"><div class="stat-label">Total Credit Units</div><div class="stat-val">${totalCU}</div></div>
+      <div class="result-stat"><div class="stat-label">Total Quality Points</div><div class="stat-val">${totalQP.toFixed(0)}</div></div>
+      <div class="result-stat"><div class="stat-label">Semesters</div><div class="stat-val">${semResults.length}</div></div>
+    </div>
+    <div class="sem-summary">
+      <div class="sem-summary-title">Semester Breakdown</div>
+      ${semResults.map(s => `
+        <div class="sem-row">
+          <span class="sem-name">${s.label}</span>
+          <span style="font-size:0.78rem;color:var(--muted)">${s.cu} units · ${s.qp.toFixed(0)} QP</span>
+          <span class="sem-gpa">${s.gpa.toFixed(2)}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// ── Tab switching ─────────────────────────────────────────
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-semester').style.display   = tab === 'semester'   ? '' : 'none';
+  document.getElementById('tab-cumulative').style.display = tab === 'cumulative' ? '' : 'none';
+  recalc();
+}
+
+// ── Init ──────────────────────────────────────────────────
+// Seed single semester with 6 courses
+for (let i = 0; i < 6; i++) addCourse('single-courses', 'single');
+
+// Seed cumulative with 2 semesters
+addSemester();
+addSemester();
+</script>
+</body>
+</html>
