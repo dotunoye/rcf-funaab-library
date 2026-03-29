@@ -74,7 +74,7 @@
     "faculty": "College of Natural Sciences",
     "icon": "🔬",
     "color": "#22d3ee",
-    "live": true,
+    "live": false,
     "levels": [
       { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_PHYSICS_100" },
       { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_PHYSICS_200" },
@@ -87,7 +87,7 @@
     "faculty": "College of Natural Sciences",
     "icon": "🧬",
     "color": "#22d3ee",
-    "live": true,
+    "live": false,
     "levels": [
       { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_BIOLOGY_100" },
       { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_BIOLOGY_200" },
@@ -100,7 +100,7 @@
     "faculty": "College of Natural Sciences",
     "icon": "🦠",
     "color": "#22d3ee",
-    "live": true,
+    "live": false,
     "levels": [
       { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_MICROBIOLOGY_100" },
       { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_MICROBIOLOGY_200" },
@@ -113,7 +113,7 @@
     "faculty": "College of Agricultural Management",
     "icon": "🐟",
     "color": "#a78bfa",
-    "live": true,
+    "live": false,
     "levels": [
       { "level": "100", "url": "https://drive.google.com/PLACEHOLDER_AQUACULTURE_100" },
       { "level": "200", "url": "https://drive.google.com/PLACEHOLDER_AQUACULTURE_200" },
