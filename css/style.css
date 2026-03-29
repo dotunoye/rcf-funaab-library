@@ -882,3 +882,9 @@ footer {
   html { scroll-behavior: auto; }
 }
 
+@media (max-height: 500px) {
+  header {
+    position: relative; /* Un-fixes it so it scrolls out of the way */
+  }
+}
+
