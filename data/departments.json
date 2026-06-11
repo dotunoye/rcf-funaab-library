@@ -218,14 +218,6 @@
     "levels": []
   },
   {
-    "name": "Water Resources Management",
-    "faculty": "College of Engineering",
-    "icon": "💧",
-    "color": "#4ade80",
-    "live": false,
-    "levels": []
-  },
-  {
     "name": "Environmental Management",
     "faculty": "College of Environmental Studies",
     "icon": "♻️",
@@ -252,6 +244,21 @@
   {
     "name": "Veterinary Medicine",
     "faculty": "College of Veterinary Medicine",
+    "icon": "🐾",
+    "color": "#f43f5e",
+    "live": false,
+    "levels": [
+      { "level": "100", "url": "" },
+      { "level": "200", "url": "" },
+      { "level": "300", "url": "" },
+      { "level": "400", "url": "" },
+      { "level": "500", "url": "" },
+      { "level": "600", "url": "" }
+    ]
+  },
+  {
+    "name": "Veterinary Medicine",
+    "faculty": "College of Moon Medicine",
     "icon": "🐾",
     "color": "#f43f5e",
     "live": false,

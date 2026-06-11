@@ -432,8 +432,12 @@ h1 {
 .controls-section { position: relative; z-index: 1; padding-bottom: 1rem; }
 
 .controls-row {
-  display: flex; align-items: center;
-  gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;
+  display: flex; 
+  align-items: center;
+  gap: 1rem; 
+  flex-wrap: wrap; 
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .search-bar {
@@ -484,7 +488,7 @@ h1 {
 
 .stats-bar {
   display: flex; align-items: center; gap: 0.75rem;
-  font-size: 0.85rem; color: var(--muted); padding-bottom: 1.5rem;
+  font-size: 0.85rem; color: var(--muted); padding-bottom: 0.5rem;
 }
 .stats-bar strong { color: var(--text); font-weight: 500; }
 .stats-divider { opacity: 0.4; }
@@ -561,8 +565,12 @@ background: rgba(255, 255, 255, 0.1); /* Slightly brighter on hover */
 .card-top { display: flex; justify-content: space-between; align-items: flex-start; }
 
 .card-icon {
-  width: 44px; height: 44px; border-radius: var(--radius-sm);
-  display: flex; align-items: center; justify-content: center;
+  width: 44px; 
+  height: 44px; 
+  border-radius: var(--radius-sm);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   font-size: 1.25rem;
 }
 
@@ -584,13 +592,13 @@ background: rgba(255, 255, 255, 0.1); /* Slightly brighter on hover */
   animation: blink 1.6s ease-in-out infinite;
 }
 .badge.soon {
-  background: rgba(107,114,128,0.1); color: var(--muted);
+  background: #6b72801a; color: var(--muted);
   border: 1px solid rgba(107,114,128,0.18);
 }
 
 .card-body { flex: 1; }
 .card-faculty { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
-.card-name { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; line-height: 1.35; }
+.card-name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.35; }
 .dept-card.soon-card .card-name { color: var(--subtle); }
 
 .no-results {
@@ -801,6 +809,48 @@ footer {
   display: flex; align-items: center;
   gap: 1rem; flex-wrap: wrap;
   flex-direction: column;
+}
+
+.dept-view-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.college-back-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid #e5e7eb; /* Matches your light card borders */
+    border-radius: 8px;
+    color: #374151;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.college-back-btn:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    color: #111827;
+}
+
+.college-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #d4d4d4;
+    margin: 0;
+}
+
+/* Ensure the empty state respects the new toggle flow */
+#no-results {
+    display: none;
 }
 
 .footer-brand { display: flex; align-items: center; gap: 0.75rem; }
